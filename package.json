@@ -1,0 +1,19 @@
+{
+  "name": "println",
+  "version": "0.0.1",
+  "description": "Direct print using node js sea",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/driannaird/println.git"
+  },
+  "author": "DRIAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/driannaird/println/issues"
+  },
+  "homepage": "https://github.com/driannaird/println#readme"
+}
