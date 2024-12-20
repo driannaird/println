@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./PrintForm.module.css";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const PrintForm: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -48,10 +49,7 @@ const PrintForm: React.FC = () => {
     };
 
     try {
-      const response = await fetch(
-        "http://192.168.22.245:3000/print",
-        requestOptions
-      );
+      const response = await fetch(`${API_URL}/print`, requestOptions);
       const result = await response.text();
       setUploadResult(result);
     } catch (error) {
@@ -62,7 +60,7 @@ const PrintForm: React.FC = () => {
 
   const checkPrintStatus = async () => {
     try {
-      const response = await axios.get("http://192.168.22.245:3000");
+      const response = await axios.get(`${API_URL}`);
 
       setPrintStatus(response.data.message);
     } catch (error) {
