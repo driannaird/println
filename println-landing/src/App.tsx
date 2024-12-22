@@ -1,7 +1,5 @@
-import PrintForm from "./PrintForm";
-
 function App() {
-  return <PrintForm />;
+  return <div>j</div>;
 }
 
 export default App;
