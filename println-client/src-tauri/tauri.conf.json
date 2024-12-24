@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "println-client",
+  "version": "0.0.1",
+  "identifier": "com.println-client.app",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "println-client",
+        "devtools": false,
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/println32x32.png",
+      "icons/println128x128.png",
+      "icons/println128x128@2x.png",
+      "icons/icon.icns",
+      "icons/println.ico"
+    ]
+  }
+}
